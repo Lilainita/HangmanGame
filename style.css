@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    /*if we add any padding or border doesn't affect the width of the element*/
+}
+
+body {
+    background: url("./hangman.jpg") no-repeat center center/cover;
+    font-family: "Muli", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    color: #fff;
+}
+
+.btn {
+    background-color: rebeccapurple;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    margin: 2px;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px 0;
+}
+
+.game-container {
+    padding: 10px 10px;
+    position: relative;
+    margin: auto;
+    height: 550px;
+    width: 550px;
+}
+
+.btn:active {
+    transform: scale(1.20);
+}
+
+#keyboard {
+    margin: 50px;
+}
+
+.words {
+    margin: 2px;
+    font-size: 30px;
+    height: 50px;
+    width: 40px;
+    color: #e5ff6f;
+    text-align: center;
+    box-shadow: 0 0 10px 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+
+.figure-container {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    position: absolute;
+    left: calc(50% - 100px);
+}
+
+.figure-part {
+    display: none;
+}
+
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background: #8b9297;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.popup button {
+    cursor: pointer;
+    background-color: #fff;
+    color: #2980b9;
+    border: 0;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+}
